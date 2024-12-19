@@ -1,0 +1,410 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfdfd;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b22e2e;
+    color: white;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+#verCarrinho {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#verCarrinho img {
+    width: 30px;
+    filter: invert(1); /* Deixa o ícone branco */
+}
+
+main {
+    padding: 20px;
+}
+
+h3 {
+    color: #b22e2e;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #b22e2e;
+}
+
+footer button {
+    background-color: white;
+    color: #b22e2e;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+/* Cardápio */
+.item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.item img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.detalhes-item {
+    flex: 1;
+}
+
+.preco-adicionar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.preco-adicionar button {
+    background-color: #b22e2e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.preco-adicionar input {
+    width: 40px;
+    text-align: center;
+}
+
+/* Carrinho */
+#itensCarrinho {
+    margin-bottom: 20px;
+}
+
+#itensCarrinho div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#itensCarrinho p {
+    margin: 0;
+    font-size: 16px;
+}
+
+#itensCarrinho button {
+    background-color: #ff4c4c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#total {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+}
+
+#botoesCarrinho {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#botoesCarrinho button {
+    background-color: #b22e2e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#botoesCarrinho button:hover {
+    background-color: #941f1f;
+}
+
+/* Tela de Pagamento */
+#metodosPagamento, #pixPagamento, #cartaoPagamento {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#pixPagamento img {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #b22e2e;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #941f1f;
+}
+
+/* Tela de Confirmação */
+#confirmacaoPedido {
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#confirmacaoPedido h3 {
+    font-size: 1.3em; /* Tamanho reduzido */
+    color: #28a745;
+}
+
+#confirmacaoPedido p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+/* Botão WhatsApp */
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 8px 12px; /* Tamanho ajustado */
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1EBE57;
+}
+
+/* Botão de Voltar */
+footer button {
+    background-color: #b22e2e;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+footer button:hover {
+    background-color: #941f1f;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #confirmacaoPedido {
+        padding: 10px;
+    }
+
+    #confirmacaoPedido h3 {
+        font-size: 1.1em;
+    }
+
+    .whatsapp-btn, footer button {
+        font-size: 0.9em;
+        padding: 6px 10px;
+    }
+}
+
+/* Imagem de fundo no header */
+header {
+    background-image: url('fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white; /* Texto branco para contraste */
+    text-align: center;
+    padding: 20px 0; /* Espaçamento */
+}
+
+header h1, header h2 {
+    margin: 0;
+    font-size: 1.8em;
+    text-shadow: 1px 1px 2px #000;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    header h2 {
+        font-size: 1em;
+    }
+}
+
+/* Geral */
+#pagamento {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+#filtros button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#filtros button:hover {
+    background-color: #0056b3;
+}
+
+/* Pix */
+#pix img {
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+}
+
+/* Formulário de cartão */
+#cartao form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+#cartao label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#cartao input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#cartao button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cartao button:hover {
+    background-color: #218838;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
