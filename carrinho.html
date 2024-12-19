@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedeaqui - Carrinho</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1 onclick="voltarAoInicio()" style="cursor: pointer;">Pedeaqui</h1>
+        <h2>Carrinho</h2>
+    </header>
+    <main>
+        <div id="itensCarrinho"></div>
+        <div id="total">Total: R$ 0,00</div>
+        <div id="botoesCarrinho">
+            <button onclick="finalizarPedido()">Finalizar Pedido</button>
+            <button onclick="voltarAoCardapio()">Voltar ao Cardápio</button>
+        </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+    <script>
+        carregarCarrinho(); // Carrega os itens ao abrir a página
+    </script>
+</body>
+</html>
