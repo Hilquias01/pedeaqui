@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedeaqui - Pagamento</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1 onclick="voltarAoInicio()" style="cursor: pointer;">Pedeaqui</h1>
+        <h2>Pagamento</h2>
+    </header>
+    <main>
+        <section id="pagamento">
+            <h3>Escolha seu método de pagamento:</h3>
+
+            <!-- Filtros para pagamento -->
+            <div id="filtros">
+                <button onclick="mostrarPix()">Pix</button>
+                <button onclick="mostrarCartao('credito')">Cartão de Crédito</button>
+                <button onclick="mostrarCartao('debito')">Cartão de Débito</button>
+            </div>
+
+            <!-- Área de Pix -->
+            <div id="pix" style="display: none;">
+                <h4>Pagamento com Pix</h4>
+                <div id="qrCode"></div>
+                <p>Chave Pix: <span id="chavePix"></span></p>
+            </div>
+
+            <!-- Área de Cartão -->
+            <div id="cartao" style="display: none;">
+                <h4 id="tipoCartao">Pagamento com Cartão</h4>
+                <form id="formCartao" onsubmit="processarPagamento(event)">
+                    <label for="nome">Nome no cartão:</label>
+                    <input type="text" id="nome" required>
+            
+                    <label for="numero">Número do cartão:</label>
+                    <input type="text" id="numero" placeholder="0000-0000-0000-0000" maxlength="19" required>
+            
+                    <label for="validade">Validade:</label>
+                    <input type="text" id="validade" placeholder="MM/AA" maxlength="5" required>
+            
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" maxlength="3" required>
+            
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" placeholder="(00) 00000-0000" maxlength="15" required>
+            
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" placeholder="00000-000" maxlength="9" required>
+            
+                    <button type="submit">Pagar</button>
+                </form>
+            </div>
+            
+            <button onclick="confirmarPagamento()">Confirmar Pagamento</button>
+        </section>
+    </main>
+    <footer>
+        <button onclick="voltarAoCarrinho()">Voltar ao Carrinho</button>
+    </footer>
+
+    <script>
+        // Função para voltar ao início
+        function voltarAoInicio() {
+            window.location.href = 'index.html';
+        }
+
+        // Função para voltar ao carrinho
+        function voltarAoCarrinho() {
+            window.location.href = 'carrinho.html';
+        }
+
+        // Filtros para exibir métodos de pagamento
+        function mostrarPix() {
+            document.getElementById('pix').style.display = 'block';
+            document.getElementById('cartao').style.display = 'none';
+            gerarQRCode();
+            gerarChavePix();
+        }
+
+        function mostrarCartao(tipo) {
+            document.getElementById('pix').style.display = 'none';
+            document.getElementById('cartao').style.display = 'block';
+            document.getElementById('tipoCartao').textContent = `Pagamento com Cartão de ${tipo === 'credito' ? 'Crédito' : 'Débito'}`;
+        }
+
+        // Função para gerar QR Code (link de demonstração para página de confirmação)
+        function gerarQRCode() {
+            const qrCodeDiv = document.getElementById('qrCode');
+            qrCodeDiv.innerHTML = ''; // Limpa o QR Code anterior
+            const qrText = 'http://localhost/confirmacao.html'; // URL de exemplo
+            const qr = document.createElement('img');
+            qr.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${qrText}`;
+            qr.alt = 'QR Code de Pagamento';
+            qrCodeDiv.appendChild(qr);
+        }
+
+        // Função para gerar uma chave Pix aleatória
+        function gerarChavePix() {
+            const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let chave = '';
+            for (let i = 0; i < 32; i++) {
+                chave += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+            }
+            document.getElementById('chavePix').textContent = chave;
+        }
+
+        // Função para confirmar o pagamento
+        function confirmarPagamento() {
+            alert('Pagamento confirmado!');
+            window.location.href = 'confirmacao.html'; // Redireciona para confirmação
+        }
+    </script>
+</body>
+</html>

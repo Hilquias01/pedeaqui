@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedeaqui - Pedido Finalizado</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1 onclick="voltarAoInicio()" style="cursor: pointer;">Pedeaqui</h1>
+        <h2>Pedido Confirmado!</h2>
+    </header>
+    <main>
+        <section id="confirmacaoPedido">
+            <h3>🎉 Obrigado pelo seu pedido!</h3>
+            <p>Seu pedido foi recebido com sucesso e já está sendo preparado.</p>
+            <p>Se precisar entrar em contato conosco, clique no botão abaixo para falar via WhatsApp:</p>
+            <a href="https://wa.me/68999641386" target="_blank">
+                <button class="whatsapp-btn">📱 Falar no WhatsApp</button>
+            </a>
+        </section>
+    </main>
+    <footer>
+        <button onclick="voltarAoInicio()">Voltar ao Cardápio</button>
+    </footer>
+    <script>
+        function voltarAoInicio() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

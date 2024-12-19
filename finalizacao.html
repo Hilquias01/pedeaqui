@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedeaqui - Pagamento</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pedeaqui</h1>
+        <h2>Pagamento</h2>
+    </header>
+    <main>
+        <section id="metodosPagamento">
+            <h3>Escolha o método de pagamento:</h3>
+            <button onclick="mostrarPix()">Pagamento via QR Code</button>
+            <button onclick="mostrarCartao()">Pagamento com Cartão</button>
+        </section>
+
+        <!-- Div para pagamento via QR Code -->
+        <section id="pixPagamento" style="display: none;">
+            <h3>Pagamento via QR Code</h3>
+            <p>Escaneie o QR Code abaixo para efetuar o pagamento:</p>
+            <div id="qrCode"></div>
+            <button onclick="finalizarCompra()">Finalizar Compra</button>
+        </section>
+
+        <!-- Div para pagamento via Cartão -->
+        <section id="cartaoPagamento" style="display: none;">
+            <h3>Pagamento com Cartão</h3>
+            <form id="formCartao" onsubmit="processarPagamento(event)">
+                <label for="numeroCartao">Número do Cartão:</label>
+                <input type="text" id="numeroCartao" required maxlength="16" placeholder="Digite o número do cartão">
+
+                <label for="nomeTitular">Nome do Titular:</label>
+                <input type="text" id="nomeTitular" required placeholder="Nome completo">
+
+                <label for="validadeCartao">Validade:</label>
+                <input type="text" id="validadeCartao" required maxlength="5" placeholder="MM/AA">
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" required maxlength="3" placeholder="Código de segurança">
+
+                <button type="submit">Pagar</button>
+            </form>
+        </section>
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
