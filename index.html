@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedeaqui - Cardápio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1 onclick="voltarAoInicio()" style="cursor: pointer;">Pedeaqui</h1>
+        <button id="verCarrinho" onclick="abrirCarrinho()">
+            <img src="assets/imagens/carrinho.png" alt="Carrinho" style="width: 30px; vertical-align: middle;">
+        </button>
+    </header>
+    <main>
+        <section id="cardapio">
+            <h3>Lanches</h3>
+            <div class="item">
+                <img src="assets/imagens/hamburguer.jpg" alt="Hambúrguer">
+                <div class="detalhes-item">
+                    <h4>Hambúrguer Clássico</h4>
+                    <p>Delicioso hambúrguer com queijo e alface.</p>
+                    <div class="preco-adicionar">
+                        <span>R$ 15,00</span>
+                        <input type="number" id="quantidadeHamburguer" value="1" min="1" style="width: 40px;">
+                        <button onclick="adicionarAoCarrinho('Hambúrguer Clássico', 15, 'quantidadeHamburguer')">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+            <h3>Bebidas</h3>
+            <div class="item">
+                <img src="assets/imagens/refrigerante.jpg" alt="Refrigerante">
+                <div class="detalhes-item">
+                    <h4>Refrigerante</h4>
+                    <p>Lata de 350ml, sabor à escolha.</p>
+                    <div class="preco-adicionar">
+                        <span>R$ 5,00</span>
+                        <input type="number" id="quantidadeRefrigerante" value="1" min="1" style="width: 40px;">
+                        <button onclick="adicionarAoCarrinho('Refrigerante', 5, 'quantidadeRefrigerante')">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || []; // Carrega do localStorage
+        console.log("Carrinho carregado na tela do cardápio:", carrinho);
+        </script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
