@@ -68,7 +68,7 @@ function mostrarPix() {
 
     // Simula a geração do QR Code (coloque uma imagem para o QR Code real)
     const qrCodeDiv = document.getElementById('qrCode');
-    qrCodeDiv.innerHTML = '<img src=" https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://127.0.0.1:5500/confirmacao.html" alt="QR Code para pagamento" style="width: 200px;">';
+    qrCodeDiv.innerHTML = '<img src=" https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://hilquias01.github.io/pedeaqui/confirmacao.html" alt="QR Code para pagamento" style="width: 200px;">';
 }
 
 // Função para exibir o pagamento via cartão
