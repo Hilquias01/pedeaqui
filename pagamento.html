@@ -94,7 +94,7 @@
             qrCodeDiv.innerHTML = ''; // Limpa o QR Code anterior
             const qrText = 'https://hilquias01.github.io/pedeaqui/confirmacao.html'; // URL de exemplo
             const qr = document.createElement('img');
-            qr.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://hilquias01.github.io/pedeaqui/confirmacao.html`;
+            qr.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${qrText}`;
             qr.alt = 'QR Code de Pagamento';
             qrCodeDiv.appendChild(qr);
         }
