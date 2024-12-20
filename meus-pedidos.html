@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Pedidos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .pedido {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+
+        .pedido h2 {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .pedido p {
+            margin: 5px 0;
+        }
+
+        .itens {
+            margin: 10px 0;
+        }
+
+        .botao-entrega {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .botao-entrega:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .botao-voltar {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: #d9534f;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meus Pedidos</h1>
+    <div id="lista-pedidos"></div>
+    <a href="index.html" class="botao-voltar">Voltar ao Cardápio</a>
+    <script src="script.js"></script>
+</body>
+</html>
