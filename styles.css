@@ -27,7 +27,6 @@ header h1 {
 
 #verCarrinho img {
     width: 30px;
-    filter: invert(1); /* Deixa o ícone branco */
 }
 
 main {
@@ -407,4 +406,8 @@ button {
 
 button:hover {
     background-color: #218838;
+}
+
+#verPedidos{
+    background-color: #21883700; /*Deixa o icone trasparente dos pedidos*/
 }
