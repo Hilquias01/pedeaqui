@@ -11,7 +11,7 @@ function adicionarAoCarrinho(nome, preco, quantidadeInputId) {
     }
 
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
-    alert(`${quantidade}x ${nome} adicionados ao carrinho!`);
+    
 }
 
 // Função para abrir a página do carrinho
@@ -108,7 +108,5 @@ function salvarDadosEntrega() {
 
     const dadosEntrega = { nome, endereco, bairro, cidade, cep, telefone, observacoes };
     localStorage.setItem('dadosEntrega', JSON.stringify(dadosEntrega)); // Salva no localStorage
-
-    alert('Dados de entrega salvos! Prosseguindo para o pagamento.');
     window.location.href = 'pagamento.html'; // Redireciona para a página de pagamento
 }
