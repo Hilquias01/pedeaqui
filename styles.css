@@ -19,7 +19,7 @@ header h1 {
     margin: 0;
 }
 
-#verCarrinho, #verPedidos {
+#verCarrinho #verPedidos {
     background: none;
     border: none;
     cursor: pointer;
