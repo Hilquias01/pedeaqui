@@ -19,12 +19,13 @@ header h1 {
     margin: 0;
 }
 
-#verCarrinho, #verPedidos {
+#verCarrinho {
     background: none;
     border: none;
     cursor: pointer;
 }
-
+verPedidos { background-color: #21883700; /*Deixa o icone trasparente dos pedidos*/
+}
 #verCarrinho img {
     width: 30px;
 }
