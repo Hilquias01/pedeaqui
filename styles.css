@@ -24,7 +24,10 @@ header h1 {
     border: none;
     cursor: pointer;
 }
-verPedidos { background-color: #21883700; /*Deixa o icone trasparente dos pedidos*/
+verPedidos {
+    background: none;
+    border: none;
+    cursor: pointer; /*Deixa o icone trasparente dos pedidos*/
 }
 #verCarrinho img {
     width: 30px;
@@ -255,32 +258,6 @@ footer button:hover {
     .whatsapp-btn, footer button {
         font-size: 0.9em;
         padding: 6px 10px;
-    }
-}
-
-/* Imagem de fundo no header */
-header {
-    background-image: url('fundo.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white; /* Texto branco para contraste */
-    text-align: center;
-    padding: 20px 0; /* Espaçamento */
-}
-
-header h1, header h2 {
-    margin: 0;
-    font-size: 1.8em;
-    text-shadow: 1px 1px 2px #000;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-    header h2 {
-        font-size: 1em;
     }
 }
 
