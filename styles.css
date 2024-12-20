@@ -19,7 +19,7 @@ header h1 {
     margin: 0;
 }
 
-#verCarrinho {
+#verCarrinho, #verPedidos {
     background: none;
     border: none;
     cursor: pointer;
@@ -28,7 +28,6 @@ header h1 {
 #verCarrinho img {
     width: 30px;
 }
-
 main {
     padding: 20px;
 }
@@ -406,8 +405,4 @@ button {
 
 button:hover {
     background-color: #218838;
-}
-
-#verPedidos{
-    background-color: #21883700; /*Deixa o icone trasparente dos pedidos*/
 }
